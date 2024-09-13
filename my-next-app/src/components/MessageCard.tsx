@@ -37,7 +37,12 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
       toast({
         title: response.data.message,
       });
-      onMessageDelete(message._id);
+      if (typeof message._id === 'string') {
+        onMessageDelete(message._id);
+      } else {
+        // Handle the case where _id is not a string
+        console.error('Message ID is not a string');
+      }
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
       toast({
