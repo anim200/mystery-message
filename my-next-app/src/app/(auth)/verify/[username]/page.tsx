@@ -50,14 +50,15 @@ const VerifyAccount = () => {
 
       if (axiosError.response) {
         // Server responded with a status other than 200 range
-        errorMessage = axiosError.response.data.message || errorMessage;
+        errorMessage = axiosError.response.data?.message || axiosError.response.statusText || errorMessage;
       } else if (axiosError.request) {
         // Request was made but no response was received
         errorMessage = 'No response from server. Please try again later.';
       } else {
         // Something happened in setting up the request
-        errorMessage = error.message;
+        errorMessage = axiosError.message || 'An error occurred while setting up the request.';
       }
+    
 
       toast({
         title: "Signup failed",
