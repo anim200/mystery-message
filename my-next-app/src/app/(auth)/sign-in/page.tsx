@@ -42,7 +42,8 @@ const Page = () => {
    const result = await signIn('credentials',
       { redirect:false,
         identifier:data.identifier,
-        password:data.password
+        password:data.password,
+       callbackUrl: '/dashboard',
       }
     )
     if (result?.error) {
@@ -57,8 +58,8 @@ const Page = () => {
     }
     if(result?.url){
       
-      router.replace('/dashboard')
-      router.refresh();
+     router.replace(result.url);
+  
 
     }
     
