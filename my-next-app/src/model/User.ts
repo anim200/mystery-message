@@ -60,7 +60,7 @@ const userSchema: Schema<User> = new Schema({
     },
     isVerified:{
         type: Boolean,
-        default: false//by default no one is verified
+        default: true//by default no one is verified
     },
     isAcceptingMessage:{
         type: Boolean,
