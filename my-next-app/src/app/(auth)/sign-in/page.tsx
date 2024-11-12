@@ -19,6 +19,7 @@ import { Loader2 } from "lucide-react"
 import { signInSchema } from "@/schemas/signInSchema"
 import { signIn } from "next-auth/react"
 export const dynamic = 'force-dynamic'
+import { getSession } from "next-auth/react";
 
 
 const Page = () => {
@@ -43,7 +44,7 @@ const Page = () => {
       { redirect:false,
         identifier:data.identifier,
         password:data.password,
-       callbackUrl: '/dashboard',
+        callbackUrl: '/dashboard',
       }
     )
     if (result?.error) {
@@ -56,12 +57,22 @@ const Page = () => {
       )
       
     }
-    if(result?.url){
-      
-     router.replace(result.url);
-  
-
+   
+    else {
+      // Double-check session after sign-in
+      const session = await getSession();
+      if (session) {
+        router.replace('/dashboard');
+        window.location.reload();
+      } else {
+        toast({
+          title: "Error",
+          description: "Unable to verify session, please try again.",
+          variant: "destructive",
+        });
+      }
     }
+  
     
 
   }
@@ -142,4 +153,3 @@ const Page = () => {
 }
 
 export default Page
-
