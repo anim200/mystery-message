@@ -55,7 +55,9 @@ const Page = () => {
       
     }
     if(result?.url){
+         setTimeout(() => {
       router.replace('/dashboard')
+  }, 3000);
     }
     
 
