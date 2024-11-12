@@ -63,7 +63,7 @@ const Page = () => {
       const session = await getSession();
       if (session) {
         router.push('/dashboard');
-        window.location.reload();
+        
       } else {
         toast({
           title: "Error",
