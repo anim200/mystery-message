@@ -69,7 +69,9 @@ const Page = () => {
       title:'Success',
       description: response.data.message
     })
-    router.replace(`/verify/${username}`)
+    setTimeout(() => {
+      router.replace('/sign-in')
+  }, 3000);
     setIsSubmitting(false)
 
     }catch(error){
