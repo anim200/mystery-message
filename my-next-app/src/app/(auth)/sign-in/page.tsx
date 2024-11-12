@@ -62,7 +62,7 @@ const Page = () => {
       // Double-check session after sign-in
       const session = await getSession();
       if (session) {
-        router.replace('/dashboard');
+        router.push('/dashboard');
         window.location.reload();
       } else {
         toast({
