@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button"
 import { Loader2 } from "lucide-react"
 import { signInSchema } from "@/schemas/signInSchema"
 import { signIn } from "next-auth/react"
+export const dynamic = 'force-dynamic'
 
 
 const Page = () => {
