@@ -1,4 +1,3 @@
-
 # Mystery Message
 
 **Mystery Message** is a modern web application built with **Next.js** that allows users to send and receive anonymous messages effortlessly. Inspired by platforms like NGL, this app enables users to generate a unique shareable link, which they can share with friends, family, or social media followers. Others can then use this link to send completely anonymous messages, fostering fun, curiosity, and open communication.
@@ -9,8 +8,7 @@ The application leverages the power of **Next.js** for both the frontend and bac
 
 ## 🌐 Website Link
 
-[Visit Mystery Message Here](#)  
-*(https://mystery-message-one.vercel.app/)*
+[Visit Mystery Message Here](https://mystery-message-one.vercel.app/)
 
 ---
 
@@ -36,14 +34,14 @@ This combination of tools ensures a clean, efficient, and user-friendly experien
 
 ## 📜 Table of Contents
 
-1. [Features](#features)
-2. [User Interface Screens](#user-interface-screens)
-   - [Intro Page](#intro-page)
-   - [Register Page](#register-page)
-   - [Login Page](#login-page)
-   - [Link Page](#link-page)
-   - [Message Sending Page](#message-sending-page)
-3. [Development Setup](#development-setup)
+1. [Features](#-features)
+2. [User Interface Screens](#-user-interface-screens)
+   - [Intro Page](#1-intro-page)
+   - [Register Page](#2-register-page)
+   - [Login Page](#3-login-page)
+   - [Link Page](#4-link-page)
+   - [Message Sending Page](#5-message-sending-page)
+3. [Development Setup](#-development-setup)
 
 ---
 
@@ -126,6 +124,7 @@ The starting page that welcomes users to **Mystery Message**.
 ![Message Receiving](https://i.imgur.com/DsROJzT.png)
 
 ---
+
 
 
 
